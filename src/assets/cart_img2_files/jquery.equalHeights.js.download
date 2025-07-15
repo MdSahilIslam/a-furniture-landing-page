@@ -1,0 +1,17 @@
+(function($){
+    $.fn.equalHeights = function() {
+        var tallest = 0;
+        $(this).each(function(){
+            if ($(this).outerHeight() > tallest) tallest = $(this).outerHeight();
+        });
+        $(this).each(function(){
+            var paddingTop = parseInt($(this).css('padding-top').replace('px',''));
+            var paddingBottom = parseInt($(this).css('padding-bottom').replace('px',''));
+            var borderWidthTop = parseInt($(this).css('border-top-width').replace('px',''));
+            var borderWidthBottom = parseInt($(this).css('border-bottom-width').replace('px',''));
+            var newHeight = tallest - paddingTop - paddingBottom - borderWidthTop - borderWidthBottom;
+            $(this).css('min-height',newHeight+'px');
+        });
+        return this;
+    };
+})(jQuery);

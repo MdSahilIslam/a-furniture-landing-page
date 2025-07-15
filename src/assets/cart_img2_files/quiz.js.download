@@ -1,0 +1,157 @@
+(function () {
+    
+    document.addEventListener("DOMContentLoaded", function(){
+        
+        const entire = document.getElementById('quiz-main');
+        var results = document.getElementById('results');
+        const canvas = document.getElementById('canvas');
+        const entry = document.querySelector('.entry-button');
+        const initial = document.getElementsByClassName('first');
+        const headline = document.getElementById('headline');
+        var choices = document.getElementById('choices');
+        var graphics = document.getElementsByClassName('graphic');
+        var text = document.getElementsByClassName('selection-text');
+        var options = document.getElementsByClassName('choice');
+        var score = 0;
+        var page = 0;
+
+        var data = {"pages": [{
+                "text": "<span class='indent'>What kind of</span> <span class='em'>style elements</span><span class='indent'> would you like to see</span><span class='indent'>in your house?</span>",
+                "banner": "header-images-01.png",
+                "images": [{
+                    "files": ["style_a1.png","style_b1.png", "style_c1.png","style_d1.png"],
+                    "text": [
+                        "Neutral colors, light wooden furniture, floor and table lamps.", 
+                        "Simplicity, clean lines, high-contrast colors and multifunctional furniture.", 
+                        "Cozy furniture, natural textures, wooden accents and vintage decor.",
+                        "A good combination of modern and traditional furniture, accents and decor elements that form a cohesive design scheme."
+                    ]
+                }]
+            },
+            {
+                "text": "<span class='indent'>Which bedroom</span> <span class='indent'>sounds the </span><span class='em'>coziest</span><span class='indent'> and most inviting to you?</span>",
+                "banner": "header-images-02.png",
+                "images": [{
+                    "files": ["cozy_a1.png","cozy_b1.png", "cozy_c1.png","cozy_d1.png"],
+                    "text": [
+                        "Gray walls complemented by neutral bedding, soft and rounded furniture with bold and colorful accents in the form of pillows, area rugs and wall art.", 
+                        "An all-white room that pays attention to open space. Furniture is limited to the necessary pieces such as the bed and dresser. A single piece of black-and-white wall decor is an added bonus.", 
+                        "A shiplap accent wall is the main focal point of the bedroom and includes beige carpeting, black iron accents and a sliding barn door covering the closet.",
+                        "An elegant headboard and chandelier are two main focal point elements in your bedroom. The rest of the room is neutral and casual, showcasing your willingness to blend trends together."
+                    ]
+                }]
+            },
+            {
+                "text": "<span class='indent'>What kind of</span><span class='em'>kitchen</span><span class='indent'>stands out to you</span><span class='indent'>the most?</span>",
+                "banner": "header-images-03.png",
+                "images": [{
+                    "files": ["kitchen_a1.png","kitchen_b1.png", "kitchen_c1.png","kitchen_d1.png"],
+                    "text": [
+                        "A clean space for cooking and baking is a must. Fresh white countertops, dark wooden cabinets and stainless steel appliances make for a modern-yet-traditional style with elements that remind you of your childhood home.", 
+                        "From the cabinets and walls to the backsplash and countertops, everything is white. Your countertops are bare and you have one bold, contrasting color used in accents like bar stools, light fixtures and artwork.", 
+                        "The room is filled with a mixture of sleek white countertops and bold wooden cabinets. Your favorite elements include the white brick backsplash and the spacious farmhouse sink.",
+                        "A reclaimed wood island, matching stainless steel appliances and clean architectural lines in crown molding make for a bright, classic and ageless kitchen style."
+                    ]
+                }]
+            }
+        ]};
+        setListeners(page);
+
+        function setVariables(page){
+            switch(page){
+                case 1 :
+                    let entry = document.querySelector('.entry-button');                    
+                    return entry;
+                    break;
+                default :
+                    break;
+            }
+        }
+
+        function setListeners(pg){
+            entry.addEventListener('click',()=>{ 
+                entry.style.filter = "brightness(0.4)";
+                setTimeout(()=>{  
+                    removeElements(initial);   
+                    swapElements(page); 
+                    let entryText = document.querySelector('.entry-text');
+                    entryText.className += ' underway';
+                    choices.style.display="flex";
+                    document.querySelector('.design-quiz-section').style.backgroundColor = '#FFF';
+                    headline.style.color ="#333";
+                    page++;
+                },300);
+            });
+            Array.from(options).forEach(element => {
+                element.addEventListener('click',()=>{
+                    element.style.filter = "brightness(0.4)";
+                    setTimeout(()=>{
+                        element.style.filter = "brightness(1.0)";
+                        (page < 3) ? swapElements(page) : finishQuiz();
+                        page++;
+                    },500);                      
+                });
+            });
+        }
+
+        function swapElements(page){
+            canvas.classList.remove('show-header');
+            canvas.classList.add('question');
+            canvas.style.background = "100%/ 60% no-repeat url('/wp-content/plugins/design-survey/img/"+data.pages[page].banner+"')";
+            if(document.getElementById('headline')) {
+                console.log
+                headline.outerHTML = '<h2 id="slide-headline">'+data.pages[page].text+'</h2>';
+            } else {
+                let slideHeadline = document.getElementById('slide-headline');
+                slideHeadline.innerHTML = data.pages[page].text;
+            }            
+            setImages(page);
+            setText(page);
+            window.scrollTo(0, 0);
+        }
+
+        function setImages(page){
+            var count = 0;
+            for(let item of graphics){
+                item.src = "/wp-content/plugins/design-survey/img/"+ data.pages[page].images[0].files[count];
+                count++;
+            }
+
+        }
+        function setText(page){
+            var count = 0;
+            for(let item of text){
+                item.innerHTML = data.pages[page].images[0].text[count];
+                count++;
+            }
+        }
+
+        function removeElements(collection){
+            for(let item of collection){
+                item.remove();
+            }
+            entry.remove();
+        }
+
+        function finishQuiz(){
+            setTimeout(()=>{ 
+                entire.remove();
+                results.style.opacity = 0.1;
+                results.style.display = "flex"; 
+                window.scrollTo(0, 0);               
+            },800);
+            var op = 0.1;
+            var show = setInterval(()=>{
+                if(op >= 1){
+                    clearInterval(show);
+                }
+                console.log(results.style.opacity);
+                op = op+0.005;
+                results.style.opacity=op;
+            },10)
+        }
+        function ceaseInterval() {
+            clearInterval(show);
+          } 
+    });
+}());

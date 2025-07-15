@@ -1,0 +1,79 @@
+(function($){
+    slider_init();
+    $(document).on('change',(e)=>{
+        if(e.target.name == 'contest-winners'){
+            getData(e.target.value);
+        }
+    });
+    function slider_init() {
+        $('#contest-select').slick({
+            dots: false,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: false,
+            infinite: true,
+            arrows: true
+        });
+        $('.contest-slider-1').slick({
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true
+        });
+          $('.featured-slider').slick({
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true
+        });
+    }
+    function getData(contest){
+        console.log('contest:'+contest);
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: dd_ajax.ajax_url,
+            data: {
+                "action" : "get_winners",
+                "award": contest
+            },
+            success: function(response){
+                $('.featured-slider').slick("unslick");
+                $('.contest-wrap').empty();
+                $('.contest-wrap').html(response);
+                $('.contest-wrap').find('.featured-slider').slick({
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    infinite: true  
+                });
+            }
+        })
+    }
+    /****stupid jquery wouldn't work here so had to do this ***/
+    document.addEventListener('DOMContentLoaded',()=> {
+        let choices = document.querySelectorAll('.choice-slider ul li');
+        choices.forEach((a)=>{
+            a.addEventListener('click',()=>{
+                let contest = a.getAttribute('data-selection');
+                console.log('log:'+a.children[0]);
+                let focused = a.children[0];
+                $('.choice-slider img').css('filter','none');
+                $('.choice-slider span').css('color','#8b857f');
+                focused.style.filter = 'invert()';
+                focused.nextSibling.style.color = '#000';
+                getData(contest);
+            })
+        })
+
+    })
+})(jQuery);

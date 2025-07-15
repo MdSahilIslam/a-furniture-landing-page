@@ -1,0 +1,1 @@
+This is a furniture landing page with cart feature(made using ReactJs & TailwindCss). You can add the items in the cart and remove from there. Also dark mode fature is included in this page.

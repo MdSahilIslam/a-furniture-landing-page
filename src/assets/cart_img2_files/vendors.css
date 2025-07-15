@@ -1,0 +1,242 @@
+@font-face {
+	font-family: "lucky-fellas";
+	src: url("../fonts/lucky-fellas.ttf") format("true type"),
+}
+/*** Overrides ****/
+.dream-awards-contest .main.main_fullwidth .heading h1 {
+	display: none;
+}
+.dream-awards-contest .main .heading {
+	border-bottom: none;
+}
+/*****************/
+.dream-awards-contest {
+	background: #FFF;
+}
+.dream-awards-contest .contest-sub-heading {
+	color: #8b857f;
+	text-align: center;
+	font-size: 1.5em;
+	max-width: 85%;
+	margin: 2.5em auto;
+}
+.dream-awards-contest .contest-template {
+	max-width: 1200px !important;
+}
+.dream-awards-contest .choice-slider {
+	margin: 1em 0;
+}
+.dream-awards-contest .contest-template h1 {
+	text-align: center;
+	font-family: "lucky_fellasregular",cursive !important;
+	font-size: 89px;
+	text-transform: capitalize;
+}
+.dream-awards-contest .products {
+    display: flex;
+    justify-content: space-between;
+}
+.dream-awards-contest .product {
+	text-align: center;
+}
+.dream-awards-contest .vendors {
+	color: #000;
+	background: #DEDEDE;
+	margin: 0 1em;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.dream-awards-contest .hide-desktop {
+	display: none;
+}
+.dream-awards-contest h2.contest-name {
+	background: #75bccb;
+	color: #FFF;
+	text-align: center;
+	font-size: 28px;
+	-ms-grid-row: 1;
+	-ms-grid-column-span: 3;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-family: Times !important;
+	margin: 0 !important;
+}
+.dream-awards-contest .image-container {
+	-ms-grid-column: 1;
+	-ms-grid-row: 2;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.dream-awards-contest .right-container {
+	-ms-grid-column: 2;
+	-ms-grid-row: 2;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	overflow: auto;
+	padding-right: 0;
+}
+.dream-awards-contest .right-container h3 {
+	text-align: center;
+	color: #75bccb;
+	font-size: 24px;
+}
+.dream-awards-contest .contest-template article {
+	width: 50%;
+	display: inline-block;
+}
+.dream-awards-contest .contest-template article.first {
+	width: 100%;
+	display: grid;
+	display: -ms-grid;
+	-ms-grid-columns: 2fr 1fr;
+	-ms-grid-rows: 5% 95%;
+	grid-template-columns: 70% 30%;
+	grid-template-rows: 80px 640px;
+	grid-gap: 1em;
+	overflow: hidden;
+}
+.dream-awards-contest .choice-slider ul {
+	display: flex;
+	list-style-type: none;
+	margin: 0 auto;
+}
+.dream-awards-contest .right-container p {
+	line-height: 28px;
+	padding-right: 15px;
+}
+.dream-awards-contest .runners-up {
+	display: flex;
+	display: -ms-flex;
+	min-height: 750px;
+	margin-top: 1.5em;
+}
+.dream-awards-contest .runners-up .image-container {
+	height: 400px;
+}
+.dream-awards-contest .first .slick-dotted.slick-slider {
+	margin-bottom: 30px;
+	max-height: 550px;
+}
+.dream-awards-contest .first .slick-slide img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.dream-awards-contest .slick-dots li button::before {
+	font-size:28px !important;
+	color: #75bccb;
+}
+.dream-awards-contest .winners-text {
+	width: 98%;
+	margin: 0 auto;
+}
+.dream-awards-contest .runners-up article:first-of-type {
+	margin-right: 1em;
+}
+.dream-awards-contest .runners-up .slick-initialized .slick-slide {
+	height: 425px;
+	overflow: hidden;
+}
+.dream-awards-contest .runners-up .slick-slide img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	overflow-y: hidden;
+}
+.dream-awards-contest .runners-up h3 {
+	text-align: center;
+	color: #75bccb;
+	font-size: 24px;
+}
+.dream-awards-contest .runners-up h4 {
+	text-align: center;
+	color: #75bccb;
+	font-size: 24px;
+	border: 1px solid;
+	padding: 0.25em 0;
+}
+.dream-awards-contest .contest-wrap .first h4 {
+	text-align: center;
+	color: #7d7d7d;
+	font-size: 24px;
+	border: 2px solid;
+	padding: 0.25em 0;
+	width: 94.5%;
+	margin: 1em 0 !important;
+}
+.dream-awards-contest .choice-slider span {
+	color: #8b857f;
+}
+.dream-awards-contest .choice-slider li {
+	display: flex;
+	flex-direction: column;
+	margin-right: 2em;
+	align-items: center;
+	text-align: center;
+	font-size: 0.75em;
+	cursor: pointer;
+	margin: 0 1em;
+}
+.dream-awards-contest .choice-slider span {
+	line-height: 1.5em;
+	text-transform: uppercase;
+}
+.dream-awards-contest .choice-slider img {
+	width: 75px;
+	margin-bottom: 0.5em;
+}
+.dream-awards-contest .right-container img {
+	max-height: 250px;
+	width: 100%;
+	object-fit: cover;
+}
+.dream-awards-contest .contest-wrap article p {
+	font-size: 0.8em;
+	color: #7d7d7d;
+	font-weight: 600;	
+}
+.dream-awards-contest .slick-dots {
+	background: transparent;
+}
+
+.dream-awards-contest .runners-up .slick-list.draggable {
+    height: 350px;
+}
+@media(max-width:420px) {
+	.contest-winners-select {
+		margin: 1em 0;
+		width: 100%;
+		padding: 0.5em 1em;
+	}
+	.dream-awards-contest .first .slick-dotted.slick-slider {
+		margin-bottom: 30px;
+		max-height: 325px;
+		overflow: hidden;
+	}
+	.dream-awards-contest .choice-slider {
+		display: none;
+	}
+	.dream-awards-contest .contest-template article.first {
+		display: block;
+	}
+	.dream-awards-contest .runners-up {
+		flex-direction: column;
+	}
+	.dream-awards-contest .contest-template article {
+		width: 100%;
+	}
+	.dream-awards-contest .hide-desktop {
+		display: block;
+	}
+	.dream-awards-contest .runners-up .image-container {
+		height: 300px;
+		overflow: hidden;
+	}
+}

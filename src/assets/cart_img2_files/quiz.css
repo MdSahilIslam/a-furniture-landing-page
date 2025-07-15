@@ -1,0 +1,265 @@
+/* line 1, ../sass/quiz.scss */
+@font-face {
+  font-family: dear;
+  src: url(../fonts/Blooms-Regular.otf);
+}
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Regular.otf);
+}
+@media only screen and (max-width: 599px){
+.choice {
+  padding: 1em 0;
+  width:	100%;
+}
+.result {
+  width: 100%;
+  border-right: none;
+  padding: 1em 0;
+  border-bottom: 1px solid #333;
+}
+#results {
+  width: 100%;
+  flex-direction: column;
+}
+.selection-text {
+  padding: 0;
+}
+#choices {
+  flex-direction: column;
+}
+}
+section.design-quiz-section {
+  max-width: 100%;
+  width: 1000px;
+  margin: auto auto;
+  position: relative;
+  background: #000;
+  font-family: Raleway;
+  padding: 0;
+  line-height: 16px;
+}
+section.design-quiz-section .entry-text {
+	text-align: center;
+}
+.entry-button.first[title]:hover::after {
+	content: "Click to begin survey";
+	position: absolute;
+	top: 50px;
+	right: -100px;
+	font-weight: 700;
+}
+@media only screen and (max-width: 599px) {
+  /* line 10, ../sass/quiz.scss */
+  section.design-quiz-section .underway {
+    padding: 0 !important;
+    width: 100% !important;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    color: #FFF;
+    min-height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* line 22, ../sass/quiz.scss */
+section.design-quiz-section .underway {
+  align-self: baseline;
+  padding: 1em 2em;
+  width: 45%;
+}
+/* line 27, ../sass/quiz.scss */
+section.design-quiz-section .underway h2 span.indent {
+  padding-left: 0.5em;
+  display: block;
+  line-height: 28px;
+  color: #000;
+}
+/* line 31, ../sass/quiz.scss */
+section.design-quiz-section .underway h2 span.em {
+  display: block;
+  background: #000;
+  color: #FFF;
+  padding: 0.75em 0.5em;
+  font-family: dear;
+  font-size: 2.2em;
+  margin: 0.25em 0;
+  font-style: unset;
+}
+/* line 41, ../sass/quiz.scss */
+section.design-quiz-section .underway h2#slide-headline {
+  font-weight: 300;
+  font-size: 1.75em;
+  text-align: left;
+}
+/* line 46, ../sass/quiz.scss */
+section.design-quiz-section #choices {
+  display: none;
+  background: #FFF;
+  padding: 1em 0;
+}
+/* line 51, ../sass/quiz.scss */
+section.design-quiz-section .choice {
+  text-align: center;
+  color: #333333;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0 0 2em;
+  cursor: pointer;
+}
+/* line 60, ../sass/quiz.scss */
+section.design-quiz-section .choice img {
+  max-width: 100%;
+  width: auto;
+  display: block;
+  width: 100%;
+}
+@media only screen and (max-width: 599px) {
+  /* line 68, ../sass/quiz.scss */
+  section.design-quiz-section .choice {
+    padding: 1em 0;
+    width: 100%;
+  }
+}
+/* line 73, ../sass/quiz.scss */
+section.design-quiz-section .selection-text {
+  padding: 0 1em;
+  line-height: 22px;
+}
+/* line 76, ../sass/quiz.scss */
+section.design-quiz-section #canvas {
+  background: url("/wp-content/plugins/design-survey/img/cover-01.jpg");
+  background-size: 120%;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  background-position: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 599px) {
+  /* line 1, ../sass/quiz.scss */
+  section.design-quiz-section {
+    /*div#canvas:after {
+        content: " ";
+        position: absolute;
+        min-height: 280px;
+        width: 100%;
+        background: rgba(256,256,256,0.4);
+    }*/
+  }
+  /* line 88, ../sass/quiz.scss */
+  section.design-quiz-section .question {
+    background-size: cover !important;
+  }
+}
+/* line 99, ../sass/quiz.scss */
+section.design-quiz-section .cover-header {
+  display: none;
+}
+/* line 103, ../sass/quiz.scss */
+section.design-quiz-section .show-header .cover-header {
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 1em 0;
+  width: 100%;
+}
+/* line 111, ../sass/quiz.scss */
+section.design-quiz-section #interface {
+  width: 100%;
+  height: auto;
+}
+/* line 115, ../sass/quiz.scss */
+section.design-quiz-section h1#headline {
+  text-align: center;
+  color: #FFF;
+  font-size: 3.75em;
+  line-height: 2em;
+  margin: 0.5em 0;
+  text-transform: unset;
+}
+/* line 120, ../sass/quiz.scss */
+section.design-quiz-section h1#headline span {
+  font-family: dear;
+  display: block;
+  font-size: 1.6em;
+}
+/* line 126, ../sass/quiz.scss */
+section.design-quiz-section h2.first {
+  margin: 0;
+  text-align: center;
+  color: #FFF;
+  background: #000;
+  padding: 1em 3.5em;
+  margin: 0 !important;
+  line-height: 1.25em;
+}
+/* line 133, ../sass/quiz.scss */
+section.design-quiz-section .entry-button {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: auto;
+  padding: 0.25em 1.5em;
+  color: #FFF;
+  font-size: 1.5em;
+  border: 1px solid;
+  margin: 2.5em auto 0.5em auto;
+  cursor: pointer;
+}
+
+/* line 145, ../sass/quiz.scss */
+#results {
+  display: none;
+  flex-direction: row;
+  opacity: 0.1;
+  width: 1200px;
+  max-width: 100%;
+  margin: 2em auto;
+  font-family: Raleway;
+  color: #333333;
+}
+/* line 155, ../sass/quiz.scss */
+#results .result {
+  text-align: left;
+  width: 25%;
+  border-right: 1px solid;
+  padding: 0 1.5em;
+}
+/* line 160, ../sass/quiz.scss */
+#results .result img {
+  max-width: 100%;
+  width: 100%;
+}
+/* line 164, ../sass/quiz.scss */
+#results .result .if {
+  text-align: left;
+  font-size: 0.8em;
+  margin: 0.5em 0;
+}
+/* line 169, ../sass/quiz.scss */
+#results .result .title {
+  font-size: 1em;
+  color: #FFF;
+  background: #000;
+  text-align: left;
+  padding: 0.5em;
+  display: table;
+  margin: 0.75em 0;
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+/* line 181, ../sass/quiz.scss */
+#results .result:last-of-type {
+  border-right: none;
+}
+@media only screen and (max-width: 599px) {
+  	section.design-quiz-section h2.first {
+		padding: 1em;
+	}
+}

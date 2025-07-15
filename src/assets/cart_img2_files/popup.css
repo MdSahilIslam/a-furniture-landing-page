@@ -1,0 +1,154 @@
+/*========================= Theme Customization ===============================*/
+
+.spu-box p {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+.spu-box p img {
+  transform: translateX(-20px);
+}
+.spu-box img {
+  display: block;
+}
+.spu-box h4 img {
+  margin-bottom: 20px;
+}
+.spu-content h4 {
+  padding: 0;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
+  line-height: 1.3em;
+  padding: 7px 0 6px;
+  letter-spacing: 1px;
+}
+
+.spu-content .gform_body label {
+  display: none;
+}
+
+.spu-box h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  padding: 0;
+  margin: 0;
+  line-height: 0.9;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #222;
+  padding: 0 35px;
+}
+.spu-box h5 {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10px;
+  line-height: 1.3em;
+  padding: 7px 15px 6px;
+  letter-spacing: 1px;
+}
+.no-popup {
+  font-size: 16px !important;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  position: unset;
+  color: #000 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .spu-content h4 {
+    font-size: 20px;
+  }
+
+  .spu-box h3 {
+    font-size: 40px;
+  }
+  .spu-box p {
+    font-size: 14px;
+  }
+
+  .no-popup {
+    font-size: 12px !important;
+  }
+}
+
+/* POPUP */
+.spu-content {
+  margin: 0 auto;
+  width: 560px;
+  border: 10px solid #2d2d2d;
+  text-align: center;
+  background: #fff;
+  padding: 8px 0 0;
+}
+
+.spu-content a.btn {
+  background: #252525;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 24px;
+  display: inline-block;
+  padding: 20px 33px;
+  margin: 0 0 4px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  font-family: "Roboto";
+}
+
+.spu-content a.btn:hover {
+  background: #000;
+}
+
+.spu-content a.close-btn {
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "Roboto";
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+.spu-content a.close-btn:hover {
+  text-decoration: underline;
+}
+
+.spu-content .pop-text {
+  padding: 0 0 30px !important;
+}
+
+.spu-close.top_right {
+  right: -45px;
+  top: -38px;
+  display: none;
+}
+
+.pop-text input[type="text"] {
+  min-width: 350px;
+  margin: 7px auto;
+  font-size: 15px;
+  font-family: Roboto;
+  background: #fff;
+  padding: 11px 16px;
+  display: block;
+}
+.pop-text input[type="text"]:focus {
+  outline: none;
+}
+.pop-text input[type="submit"] {
+  background: #252525;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 21px;
+  padding: 17px 56px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  font-family: "Roboto";
+  border-radius: 0;
+  display: block;
+  margin: 0 auto;
+}
+.pop-text input[type="submit"]:focus {
+  outline: none;
+}

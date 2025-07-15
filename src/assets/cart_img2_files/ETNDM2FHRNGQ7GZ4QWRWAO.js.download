@@ -1,0 +1,92 @@
+(function () {
+  var scheme = (("https:" == document.location.protocol) ? "https" : "http");
+  var adnxs_domain = 'secure.adnxs.com';
+  var aol_domain = 'secure.leadback.advertising.com';
+  window.adroll_seg_eid = "ETNDM2FHRNGQ7GZ4QWRWAO";
+  window.adroll_sendrolling_cross_device = false;
+  window.adroll_form_fields = {};
+  window.adroll_third_party_forms = {};
+  window.adroll_third_party_detected = {};
+  window.adroll_snippet_errors = [];
+  if (typeof __adroll._form_attach != 'undefined') {
+    __adroll._form_attach();
+  }
+  if (typeof __adroll._form_tp_attach != 'undefined') {
+    __adroll._form_tp_attach();
+  }
+  window.adroll_rule_type = "p";
+  var rule = ["*", "*"];
+  if (scheme=='http') { adnxs_domain = 'ib.adnxs.com'; aol_domain = 'leadback.advertising.com';}
+  var el = document.createElement("div");
+  el.style["width"] = "1px";
+  el.style["height"] = "1px";
+  el.style["display"] = "inline";
+  el.style["position"] = "absolute";
+  var content = '';
+  var rollcrawl_opts = {
+      "regexp": "(.*)",
+      "blacklist_regexp": null,
+      "blocklist_regexp": null,
+      "regexp_group": "1",
+      "product_group_regexp": null,
+      "product_group_group": null
+  };
+
+  if (__adroll.consent_allowed(__adroll.consent_networks.facebook)) {
+  }
+
+  try {
+      try {
+          
+(function() {
+  var ua = window.navigator.userAgent.toLowerCase();
+  if (window === window.top && ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1 && ua.indexOf('crios') === -1) {
+    window.document.body.className += ' adroll_safari_light_theme';
+    var b = window.document.createElement('script');
+    b.language = 'javascript';
+    b.src = '//d.adroll.com/bounce/pre/DQ7EIGZXINHTTM3GT3TE4M/UAJXA5ROEVGHRPV2GBZ3S3/?d=' + encodeURIComponent('//s.adroll.com/j/bounce.js');
+    window.__adroll._head().appendChild(b);
+  }
+})();
+
+      } catch(e) {
+          window.adroll_snippet_errors['bouncejs'] = e;
+      }
+      try {
+          
+(function() {
+var rtb = document.createElement("div");
+rtb.style["width"] = "1px";
+rtb.style["height"] = "1px";
+rtb.style["display"] = "inline";
+rtb.style["position"] = "absolute";
+rtb.innerHTML = ["/cm/b/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/bombora/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/experian/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/g/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/index/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/l/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/n/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/o/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/outbrain/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/pubmatic/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/taboola/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/triplelift/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M","/cm/x/out?advertisable=DQ7EIGZXINHTTM3GT3TE4M"].reduce(function (acc, cmURL) {
+    return acc + '<img height="1" width="1" style="border-style:none;" alt="" src="' + __adroll._srv(cmURL) + '"/>';
+}, '');
+__adroll._head().appendChild(rtb);
+})();
+
+      } catch(e) {
+          window.adroll_snippet_errors['maya_snippet'] = e;
+      }
+  } catch(e) {}
+
+  __adroll.get_pid(rollcrawl_opts);
+
+  var r = Math.random()*10000000000000000;
+  content = content.replace(/\[ord\]/gi, r);
+  content = content.replace(/\[protocol\]/gi, scheme);
+  content = content.replace(/\[adnxs_domain\]/gi, adnxs_domain);
+  content = content.replace(/\[aol_domain\]/gi, aol_domain);
+  var adroll_tpc = __adroll._global('adroll_tpc');
+  if (adroll_tpc) {
+    var srv_parts = __adroll._srv().split('?');
+    var srv_host = srv_parts[0].substr(srv_parts[0].indexOf(':') + 1);
+    var srv_re = new RegExp(srv_host + '([^\?\"\'\>\#\S]+)\\?*', 'gi');
+    content = content.replace(srv_re, srv_host + '$1?' + srv_parts[1] + '&');
+  }
+  content = __adroll.replace_external_data(content);
+  el.innerHTML = content;
+  __adroll._head().appendChild(el);
+  if (typeof __adroll.set_pixel_cookie != 'undefined') {__adroll.set_pixel_cookie(adroll_adv_id, adroll_pix_id, "ETNDM2FHRNGQ7GZ4QWRWAO");}
+}());
