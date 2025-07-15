@@ -13,7 +13,6 @@ function Product({ heading}) {
 
   const handleVisiblepRoduct = (preview) => {
     setVisibleProduct(preview + 4);
-    console.log(visibleProduct, "vsui");
   };
 
   

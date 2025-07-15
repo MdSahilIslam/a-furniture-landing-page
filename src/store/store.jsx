@@ -7,7 +7,7 @@ export const furniture_store = createContext([]);
 
 const cartItemReducer = (currentCart, update) => {
   let latestCart = currentCart;
-  console.log(update);
+  
   if (update.type === "ADD") {
     const itemId = currentCart.map((itm) => itm.id);
     if (!itemId.includes(update.payload.id)) {

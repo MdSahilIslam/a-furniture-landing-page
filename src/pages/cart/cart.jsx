@@ -5,7 +5,7 @@ import EmptyMsg from "./emtyMsg";
 
 function Cart() {
   const { cartItemUpdate } = useContext(furniture_store);
-  console.log(cartItemUpdate);
+  
   return (
     <section className=" min-h-screen">
       <div
