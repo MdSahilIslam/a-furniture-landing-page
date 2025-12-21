@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination } from "swiper/modules";
-import { Navigation } from "swiper/modules";
+import { Autoplay,Navigation } from "swiper/modules";
 import { reviews } from "../../utils/reviews.js";
 import Rating from "../shop/rating.jsx";
 
@@ -21,6 +21,11 @@ function Testimonial() {
       </div>
 
       <Swiper
+        loop={true}
+        autoplay={{
+              delay: 1800,
+              disableOnInteraction: false,
+          }}
         slidesPerView={1}
         spaceBetween={10}
         navigation={true}
@@ -41,7 +46,7 @@ function Testimonial() {
             spaceBetween: 20,
           },
         }}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay,Pagination, Navigation]}
         className="mySwiper"
       >
         {reviews.map((review, index) => (
