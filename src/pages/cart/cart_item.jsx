@@ -11,7 +11,7 @@ function CartItem({ item }) {
       <div
         className="w-[100px] md:w-[200px] h-[120px] md:h-[200px] md:ml-3 bg-cover bg-center text-center bg-primary/15 dark:bg-yellow-100 rounded-lg"
         style={{
-          backgroundImage: `url(./src/assets/products/${item.imageUrl})`,
+          backgroundImage: `url(../src/assets/products/${item.imageUrl})`,
         }}
       ></div>
 
