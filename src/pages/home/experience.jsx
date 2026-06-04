@@ -1,11 +1,12 @@
 import More from "../../components/More";
+import experienceImg from "../../assets/expricences.png";
 
 function Experience() {
   return (
     <section className="section-container my-10 grid grid-cols-1 md:grid-cols-2 justify-between items-center dark:bg-black dark:text-white">
       <div className="imge">
         <img
-          src="./src/assets/expricences.png"
+          src={`${experienceImg}`}
           alt="experience"
           className="h-full w-full"
         />

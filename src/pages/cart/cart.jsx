@@ -2,6 +2,7 @@ import { useContext } from "react";
 import CartItem from "./cart_item";
 import { furniture_store } from "../../store/store";
 import EmptyMsg from "./emtyMsg";
+import cartImg from "../../assets/cart_img5.webp";
 
 function Cart() {
   const { cartItemUpdate } = useContext(furniture_store);
@@ -11,7 +12,7 @@ function Cart() {
       <div
         className="w-full h-[250px] bg-cover bg-bottom text-center flex items-end justify-center "
         style={{
-          backgroundImage: "url(./src/assets/cart_img5.webp)",
+          backgroundImage: `url(${cartImg})`,
           opacity: "",
         }}
       >

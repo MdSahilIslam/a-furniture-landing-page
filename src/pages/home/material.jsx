@@ -1,4 +1,7 @@
 import More from "../../components/More";
+import Material1 from "../../assets/material-1.png";
+import Material2 from "../../assets/material-2.png";
+import Material3 from "../../assets/material-3.png"
 
 function Material() {
   return (
@@ -26,15 +29,15 @@ function Material() {
 
       <div className=" grid md:grid-cols-3 grid-cols-2  sm:items-end mt-8 items-center">
         <div>
-          <img src="./src/assets/material-1.png" alt="experience" />
+          <img src={Material1} alt="experience" />
           <img
-            src="./src/assets/material-2.png"
+            src={Material2}
             alt="experience"
             className=""
           />
         </div>
         <div className="mb-20 md:col-span-2 col-span-1">
-          <img src="./src/assets/material-3.png" alt="experience" />
+          <img src={Material3} alt="experience" />
         </div>
       </div>
     </section>

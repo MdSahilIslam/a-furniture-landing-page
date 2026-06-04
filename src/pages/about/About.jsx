@@ -1,12 +1,13 @@
 import Experience from "../home/experience";
 import WhyChoose from "../home/WhyChoose";
+import aboutImg from "../../assets/about-background.jpg";
 
 function About() {
   return (
     <section className=" min-h-screen">
       <div
         className="w-full h-[400px] bg-cover bg-top text-center flex items-center justify-center"
-        style={{ backgroundImage: "url(./src/assets/about-background.jpg)" }}
+        style={{ backgroundImage: `url(${aboutImg})` }}
       >
         <h1 className="text-black/50 text-6xl font-bold">About Us</h1>
       </div>
